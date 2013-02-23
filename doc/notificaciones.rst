@@ -1,9 +1,32 @@
 Notificaciones del sistema
 ====================
 
-solo que si al final en todos los flash va un TRUE ejemplo DwMessage::info('hola', TRUE);
+Para mostrar las notificaciones del sistema, es necesario incluir en la primera línea de la vista la siguiente instrucción
+
+
+.. code-block:: php
+
+    <?php View::notify();?>
+
+
+
+ 
+
+Extension para el manejo de mensajes sin hacer uso del "echo" en los controladores o modelos. solo que si al final en todos los flash va un TRUE ejemplo DwMessage::info('hola', TRUE);
 el mensaje se almacenará como log
 en un .txt
 
-Para mostrar las notificaciones del sistema, es necesario incluir en la primera línea de la vista la siguiente instrucción"
-<?php View::notify();?>
+.. code-block:: php
+    
+    <?php DwMessage::info('hola', TRUE); ?>
+    <?php DwMessage::error('error en el sistema', TRUE); ?>
+    <?php DwMessage::valid('operacion exitosa', TRUE); ?>
+    <?php DwMessage::warning('precaucion', TRUE); ?>
+    <?php DwMessage::get('precaucion', TRUE); ?>
+
+
+
+
+
+
+    
